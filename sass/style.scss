@@ -1,0 +1,1855 @@
+@import 'fonts';
+@import 'vars';
+@import 'media-queries';
+
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.parallax-section{
+    background: $white-copy;
+    padding: 3em 15% 8em;
+    background: url(/imgs/twitch.jpg);
+    height: 20em; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.parallax-section-2{
+    background: $white-copy;
+    padding: 3em 15% 8em;
+    background: url(/imgs/carnaval.jpg);
+    height: 20em; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+
+
+
+
+
+//top bar HOME//
+.topbar{
+    background-color: $top-bg;
+    padding: 0.5em 15%;
+    position: fixed;
+    width: 100%;
+    z-index: 9999999;
+    display: block;
+
+    @include respond-to($phone){
+        display: none;
+    }
+    @include respond-to($tablet-landscape){ 
+        display: none;
+    }
+    @include respond-to($tablet-portrait){ 
+        display:none
+    }
+    
+
+}
+
+.top-nav-logo{
+    text-align: left;
+    color: $white-copy;
+    text-transform: uppercase;
+    font-size: 1.876em;
+    font-family: LatoBold;
+    
+}
+.top-nav-logo-link{
+    text-decoration: none;
+    color: $white-copy;
+    float: left;
+    &:hover{
+        color: $white-copy;
+    }
+}
+
+.img-ticket{
+    height: 1.5em;
+    width: auto; 
+    transform: rotate(-15deg);
+    margin-right: 0.5em;
+}
+
+.carrito-btn{
+    width: 5em;
+    height: 2em;
+    margin: 0em auto;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.5em;
+    color: white;
+    background: none;
+    border-style: solid;
+   border-color: white;
+    border-radius: 7em;
+    float: left;
+        &:hover{
+            color: $primario;
+            background-color: $dark-bg;
+            border-color: $dark-bg;
+        }
+    }
+    .img-carrito{
+        height: 1.5em;
+        width: auto; 
+        margin: 0.2em 15%;
+    }
+
+.carrito-item{
+    font-family: LatoBold;
+    font-size: .875em;
+    list-style: none;
+    float: left;
+    padding: 0em 2em;
+}
+.carrito-link{
+    color: $white-copy;
+    text-decoration: none;
+    margin: 0;
+    padding: .3em .8em;    
+    &:hover{
+        color:$primario;
+    
+        
+    }
+}
+//top bar END//
+
+//NAV BAR HOME//
+
+
+
+.nav{
+    margin-top: 3em;
+    padding: 5em 15%;
+    position: absolute;
+    width: 100%;
+    @include respond-to($phone){
+        padding: 1em 5%;
+        margin-top: 0;
+        background: $dark-bg;
+        position: fixed;
+        z-index: 9;
+    }
+    @include respond-to($tablet-landscape){ 
+        padding: 1em 5%;
+        margin-top: 0;
+        background: $dark-bg;
+        position: fixed;
+        z-index: 9;
+    }
+    @include respond-to($tablet-portrait){ 
+        padding: 1em 5%;
+        margin-top: 0;
+        background: $dark-bg;
+        position: fixed;
+        z-index: 9;
+    }
+    
+}
+
+.hr-nav{
+    color: white;
+    margin: 3em 0em;
+    padding: 0.1em;
+    opacity: 1;
+    position: absolute;
+    width: 70%;
+    @include respond-to($phone){
+        display: none;
+    }
+    @include respond-to($tablet-landscape){ 
+        display: none;
+    }
+    @include respond-to($tablet-portrait){ 
+        display: none;
+    }    
+    
+    
+}
+.mobile-menu{
+    display: none;
+    float: right;
+    @include respond-to($phone) {
+        display: inline-block;
+        width: 1.5em;
+    }
+    img{
+        vertical-align: -webkit-baseline-middle;
+    }
+}
+#menu{
+    display: none;
+}
+#menu:checked ~ .nav-list{
+    @include respond-to($phone) {
+        left: 0;
+        display: block;
+    }
+}
+.nav-logo{
+    text-align: left;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.876em;
+    font-family: LatoBold;
+    display: inline-block;
+    @include respond-to($phone){
+        font-size: 1.5em;
+    }
+}
+.nav-logo-link{
+    font-family: LatoBold;
+    text-decoration: none;
+    color: white;
+    float: left;
+    &:hover{
+        color: white;
+    }
+    @include respond-to($tablet-landscape){ 
+        font-size: 1.5em;
+    }
+    @include respond-to($tablet-portrait){ 
+        font-size: 0.8em;
+    }
+}
+.nav-list{
+    padding: 0;
+    text-align: right;
+    float: right;
+    @include respond-to($phone){
+        display: block;
+        position: absolute;
+        float: none;
+        text-align: center;
+        margin-top: 3em;
+        padding: 4em 0 0;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        transition: .5s;
+        background-color: $dark-bg;
+        z-index: 9;
+    }
+    @include respond-to($tablet-landscape){ 
+        font-size: 1em;
+    }
+    @include respond-to($tablet-portrait){ 
+        font-size: 0.6em;
+    }
+}
+.nav-item{
+    font-family: LatoBold;
+    font-size: 1em;
+    list-style: none;
+    float: left;
+    padding: 0 0 0 1em;
+    border: 2em;
+
+    @include respond-to($phone){
+        float: none;
+        text-align: left;
+        padding: 0 0 3em;
+    }
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    font-size: 1em;
+    padding: .3em .8em;    
+    @include respond-to($phone){
+        padding: .3em 0;
+        display: block;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    &:hover{
+        color: $primario;
+    padding-bottom: .9em;
+    border-bottom: .3em solid #FF6B00;
+    }
+}
+//HEADER SECTIONS
+
+.header-section{
+    background: url(/imgs/evento.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 15em 15%;
+    
+}
+.header-title{
+    font-family: LatoBoldItalic;
+    color: $dark-bg;
+    font-size: 2.626em;
+    text-transform: uppercase;
+    width: auto;
+    line-height: 1.7em;
+    padding: 0em 0.5em;
+    
+        background: white;
+        display: inline-block;
+        font-size: 2em;
+        margin-bottom: 2em;
+        @include respond-to($tablet-landscape){ 
+            font-size: 2em;
+        }
+        @include respond-to($tablet-portrait){ 
+            font-size: 1.5em;
+        }
+        
+
+
+    
+}
+.header-subtitle{
+    font-family: LatoBoldItalic;
+    color: black;
+    text-transform: uppercase;
+    width: auto;
+    line-height: 1.7em;
+    padding: 0em 0.5em;
+    
+        background: white;
+        display: inline-block;
+        font-size: 1.7em;
+        
+        border-bottom: none;
+        @include respond-to($tablet-landscape){ 
+            font-size: 1.7em;
+        }
+        @include respond-to($tablet-portrait){ 
+            font-size: 1.5em;
+        }
+
+}
+
+
+
+
+
+
+//buscar caja
+
+
+
+.buscar-caja {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $dark-bg;
+    height: 4.5em;
+    border-radius: 40px;
+    border: solid;
+
+    border-color: white;
+    
+    padding: 1em;
+    &:hover> .buscar-txt {
+        width: 15em;
+        padding: 0 6px;
+       }
+       
+       @include respond-to($phone){
+        top: 100%;
+
+    }
+    @include respond-to($tablet-landscape){
+        top: 80%;
+        
+    }
+    @include respond-to($tablet-portrait){ 
+        top: 100%;
+    }
+       
+    
+   }
+   
+   
+   
+   .buscar-caja:hover > .buscar-btn {
+    background: $primario;
+    color: white;
+
+        @include respond-to($phone){
+        font-size: 1em;
+        
+    }
+  
+
+    
+   }
+   
+   .buscar-btn {
+    color: #e84118;
+    float: right;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background: $secundario;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+    
+
+    
+    
+
+   }
+   
+   .buscar-btn > i {
+    font-size: 20px;
+    
+   }
+   
+   .buscar-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 1.5em;
+    transition: 0.4s;
+    line-height: 0.1em;
+    
+    width: 0px;
+    font-weight: bold;
+
+    @include respond-to($phone){
+        font-size: 1.2em;
+        
+    }
+   }
+
+//Buscar caja END
+
+//Schedule Section HOME
+.schedule-section{
+    background: $dark-bg;
+    color: $white-copy;
+    padding: 3em 15%;
+
+    @include respond-to($phone){
+        display: block;
+        padding: 1em;
+        
+    }
+    
+}
+.schedule-title{
+    margin-bottom: 2em;
+    font-family: LatoRegular;
+    font-size: 1.876em;
+    text-align: left;
+    color: $white-copy;
+    color: $primario;
+
+    @include respond-to($tablet-portrait){
+        font-size: 1em;
+        
+    }
+   
+}
+.no-mostrar-phone{
+    @include respond-to($phone){
+        display: none;
+    }
+    @include respond-to($tablet-portrait){ 
+        width: 2em;
+ 
+    }
+
+}
+
+.schedule-subtitle{
+    padding: 0;
+    margin: 0;
+    font-family: LatoRegular;
+    font-size: 1.5em;
+    text-align: left;
+    color: $white-copy; 
+    @include respond-to($tablet-landscape){
+        font-size: 1em;
+        
+    }
+    @include respond-to($tablet-portrait){
+        font-size: 0.8em;
+        width: 12em;
+        
+    }
+}
+.text-services{
+    font-family: LatoRegular;
+    color: $white-copy;
+    text-align: left;
+    font-size: .75em;
+}
+
+.get-ticket-btn{
+    width: 6em;
+    text-decoration: none;
+    font-family: LatoBold;
+    font-size: 1.2em;
+    color: #f0f0f0;
+    background: $terciario;
+    border-radius: 1em;
+    float: left;
+    &:hover{
+        color: white;
+        background-color: $primario;
+
+    }
+    @include respond-to($tablet-portrait){
+        font-size: 1em;
+        
+    }
+    }
+.barra-schedule{
+    position: relative;
+    width: 100%;
+    color: white;
+    margin: 3em 0;
+    padding: 0em;
+}
+
+
+
+//-----------Schedule Section END
+
+
+
+//Upcoming Section HOME
+
+
+.upcoming-section{
+    background: $white-copy;
+    padding: 3em 15% 8em;
+    
+   
+    @include respond-to($phone){
+    display: grid;
+    padding: 2em 2em;
+    }
+   
+   
+    
+}
+.upcoming-title{
+    color: $primario;
+    font-family: LatoBold;
+    font-size: 1.876em;
+    text-align: left;
+    color: $white-copy;
+    color: $primario;
+    padding: 1em 0;
+
+    @include respond-to($tablet-portrait){
+        font-size: 1em;
+        
+    }
+    
+
+    
+}
+.texto-schedule{
+    font-family: LatoRegular;
+    font-size: 1.5em;
+    text-align: left;
+    @include respond-to($phone){
+        display: block;
+        font-size: 1.2em;
+    width: 90%;
+        
+    }
+    @include respond-to($tablet-landscape){ 
+       font-size: 1.2em;
+    }
+    @include respond-to($tablet-portrait){
+        font-size: .8em;
+        
+    }
+}
+
+
+.all-events-btn{
+    font-family: LatoBold;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #e84118;
+    background: none;
+    border-style: solid;
+   border-color: #e84118;
+    border-radius: 1em;
+    float: left;
+        &:hover{
+            color: $primario;
+            background-color: $dark-bg;
+            border-color: $dark-bg;
+        }
+
+        @include respond-to($phone){ 
+            font-size: 1.2em;
+            width: 15em;
+            color: $primario;
+            background-color: $dark-bg;
+            border-color: $dark-bg;
+            margin-bottom: 3em;
+        }
+        @include respond-to($tablet-landscape){ 
+            font-size: 1em;
+        }
+        @include respond-to($tablet-portrait){
+            font-size: 0.9em;
+            
+        }
+        
+
+
+    }
+ //evento principal (mayor demanda)
+    .evento-principal{
+        width: 100%;
+        height: 30em;
+        background: url(/imgs/futbol.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: bottom;
+        @include respond-to($phone){ 
+            width: 18em;
+            height: 18em;
+            margin-bottom: 2em;
+        }
+        @include respond-to($tablet-landscape){
+
+            width: 100%;
+            height: 100%;
+        }
+        @include respond-to($tablet-portrait){
+            width: 15em;
+            height: 15em;
+            
+        }
+    }
+
+//evento 1 de la derecha
+    .evento-secundario{
+        width: 100%;
+        height: 14em;
+        background: url(/imgs/evento-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: center;
+        @include respond-to($phone){ 
+            width: 18em;
+            height: 18em;
+        }
+        @include respond-to($tablet-landscape){ 
+            width: 10em;
+            height: 10em;
+        }
+        @include respond-to($tablet-portrait){
+            width: 7em;
+            height: 7em;
+            
+        }
+    }
+    //evento de abajo a la derecha
+    .evento-side{
+        margin-top: 2em;
+        width: 208%;
+        height: 14em;
+        background: url(/imgs/boxeo.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: top;
+        @include respond-to($phone){ 
+            width: 18em;
+            height: 18em;
+            margin-bottom: 2em;
+        }
+        @include respond-to($tablet-landscape){ 
+            width: 21.5em;
+            height:8em;
+        }
+        @include respond-to($tablet-portrait){
+            width: 15em;
+            height: 7em;
+            margin-top: 1em;
+            
+        }
+    }
+//eventos 2 de la derecha
+    .evento-terciario{
+        width: 100%;
+        height: 14em;
+        background: url(/imgs/festival.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: center;
+        @include respond-to($phone){ 
+            width: 18em;
+            height: 18em;
+        }
+        @include respond-to($tablet-landscape){ 
+            width: 10em;
+            height: 10em;
+        }
+        @include respond-to($tablet-portrait){
+            width: 7em;
+            height: 7em;
+            
+        }
+    }
+
+
+
+
+
+
+//UPCOMING SECTION END
+
+//EVENTS BY CATEGORY HOME
+
+
+.categories-section{
+    background: $dark-bg;
+    padding: 3em 15%;
+    height: 100%;
+
+    @include respond-to($phone){ 
+        display: block;
+        padding: 1em 2em;
+    }
+    
+}
+.category-title{
+    color: $primario;
+    margin: 2em 0 3em;
+    font-family: LatoBold;
+    font-size: 1.8em;
+    text-align: left;
+    color: $white-copy;
+    color: $primario;
+    @include respond-to($phone){ 
+        font-size: 1.4em;
+    }
+    @include respond-to($tablet-portrait){
+        font-size: 1em;
+        
+    }
+}
+
+
+
+.title-no{
+    margin-top: 0.3em;
+    user-select: none;
+    @include respond-to($tablet-landscape){ 
+        font-size: 1.5em;
+    }
+    @include respond-to($tablet-portrait){
+        font-size: 1em;
+        
+    }
+    @include respond-to($tablet-portrait){
+        font-size: .8em;
+        
+    }
+}
+.text-no{
+    margin: 2em;
+    font-size: medium;
+    user-select: none;
+    @include respond-to($tablet-landscape){ 
+        font-size: 0.8em;
+    }
+    @include respond-to($tablet-portrait){
+        font-size: .6em;
+        margin: 1em;
+        
+    }
+}
+
+.categoria-deportes{
+    width: 100%;
+    height: 100%;
+    background: url(/imgs/deportes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-position: center;
+
+    @include respond-to($phone){ 
+        width:18em;
+        height: 18em;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 14em;
+        height:14em;
+    }
+    @include respond-to($tablet-portrait){
+        width: 9em;
+        height: 9em;
+        
+    }
+    
+}
+.categoria-comunidades{
+    width: 100%;
+    height: 100%;
+    background: url(/imgs/comunidades.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-position: center;
+    @include respond-to($phone){ 
+        width:18em;
+        height: 18em;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 14em;
+        height:14em;
+    }
+    @include respond-to($tablet-portrait){
+        width: 9em;
+        height: 9em;
+        
+    }
+}
+.categoria-conciertos{
+    width: 100%;
+    height: 100%;
+    background: url(/imgs/concierto.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-position: center;
+    @include respond-to($phone){ 
+        width:18em;
+        height: 18em;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 14em;
+        height:14em;
+    }
+    @include respond-to($tablet-portrait){
+        width: 9em;
+        height: 9em;
+        
+    }
+}
+.categoria-teatro{
+    width: 100%;
+    height: 100%;
+    background: url(/imgs/teatro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-position: center;
+    @include respond-to($phone){ 
+        width:18em;
+        height: 18em;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 14em;
+        height:14em;
+    }
+    @include respond-to($tablet-portrait){
+        width: 9em;
+        height: 9em;
+        
+    }
+}
+.categoria-fiestas{
+    width: 100%;
+    height: 100%;
+    background: url(/imgs/fiesta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-position: center;
+    @include respond-to($phone){ 
+        width:18em;
+        height: 18em;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 14em;
+        height:14em;
+    }
+    @include respond-to($tablet-portrait){
+        width: 9em;
+        height: 9em;
+        
+    }
+}
+.categoria-conferencias{
+    width: 100%;
+    height: 100%;
+    background: url(/imgs/conferencia.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-position: center;
+    @include respond-to($phone){ 
+        width:18em;
+        height: 18em;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 14em;
+        height:14em;
+    }
+    @include respond-to($tablet-portrait){
+        width: 9em;
+        height: 9em;
+        
+    }
+}
+
+
+
+
+  .flip-card {
+    font-family: LatoRegular;
+    background-color: transparent;
+    width: 100.5%;
+    padding-bottom: 2em;
+    height: 19em;
+    perspective: 1000px;
+    @include respond-to($phone){ 
+        width:18em;
+        height: 18em;
+        margin-bottom: 3em;    
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 14em;
+        height:14em;
+        margin-bottom: 3em;
+    }
+    @include respond-to($tablet-portrait){
+        width: 9em;
+        height: 9em;
+        margin-bottom: 1em;
+    }
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    @include respond-to($phone){ 
+        width:18em;
+        height: 18em;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 14em;
+        height:14em;
+    }
+    @include respond-to($tablet-portrait){
+        width: 9em;
+        height: 9em;
+        
+    }
+    
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .deportes-back, .comunidades-back, .conciertos-back, .teatro-back, .fiestas-back, .conferencias-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include respond-to($phone){ 
+        width:18em;
+        height: 18em;
+        padding-bottom: 4em;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 14em;
+        height:14em;
+        padding-bottom: 4em;
+    }
+    @include respond-to($tablet-portrait){
+        width: 9em;
+        height: 9em;
+        padding-bottom: 1em;
+        
+    }
+  }
+  
+
+  
+  .flip-card-back {
+      
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .deportes-back {
+    font-family: LatoRegular;
+    background-color: $deportes;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .comunidades-back {
+    font-family: LatoRegular;
+    background-color: $comunidad;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .conciertos-back {
+    font-family: LatoRegular;
+    background-color: $concierto;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .teatro-back {
+    font-family: LatoRegular;
+    background-color: $teatro;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .fiestas-back {
+    font-family: LatoRegular;
+    background-color: $fiesta;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .conferencias-back {
+    font-family: LatoRegular;
+    background-color: $conferencia;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .more-event-btn{
+    font-family: LatoBold;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: white;
+    background: transparent;
+    border: solid;
+   
+    border-radius: 4em;
+    &:hover{
+        color:black;
+        background-color: white;
+        border: none;
+    }
+    @include respond-to($tablet-landscape){ 
+        font-size: 1em
+    }
+    @include respond-to($tablet-portrait){
+        font-size: 0.5em;
+        
+    }
+    }
+
+
+    //Category section END
+
+    //Footer section  HOME
+
+    .footer-section{
+        background: $dark-bg;
+        padding: 3em 15% 0 ;
+    }
+
+    .logo-footer{
+    color: $primario;
+    margin: 2em 0 16em;
+    font-family: LatoRegular;
+    font-size: 1.876em;
+    text-align: left;
+    color: $white-copy;
+    color: $primario;
+    }
+
+  .footer-title{  
+  height: 5em;
+  width: 5em;
+  padding: 1.7em 1em;
+  background-color: #bbb;
+  color: black;
+  border-radius: 50%;
+  display: inline-block;
+  }
+
+    .footer-subtitle{
+        padding: 0;
+        margin-top: 2em;
+        font-family: LatoRegular;
+        font-size: 1.5em;
+        text-align: left;
+        color: white; 
+        text-align: center;
+    }
+
+    .barra-footer{
+        width: 100%;
+        color: white;
+        padding: 0.1em;
+    }
+
+    .rights{
+        font-family: LatoRegular;
+        text-align: left;
+        color: white; 
+        text-align: center;
+        @include respond-to($phone){ 
+            font-size: 0.6em
+        }
+    }
+
+
+
+      .redes-facebook{
+      
+
+        height: 2em;
+        width: 2em;
+        margin: 1em;
+        background: url(/imgs/facebook.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: center;
+    }
+    .redes-instagram{
+      
+
+        height: 2em;
+        width: 2em;
+        margin: 1em;
+        background: url(/imgs/instagram.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: center;
+    }
+    .redes-twitter{
+      
+
+        height: 2em;
+        width: 2em;
+        margin: 1em;
+        background: url(/imgs/twitter.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: center;
+    }
+    .redes-github{
+      
+
+        height: 2em;
+        width: 2em;
+        margin: 1em;
+        background: url(/imgs/github.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: center;
+    }
+    .redes-linkedin{
+      
+
+        height: 2em;
+        width: 2em;
+        margin: 1em;
+        background: url(/imgs/linkedin.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: center;
+    }
+/* 
+    .categoridsaas{
+        width: 100%;
+        height: 100%;
+        background: url(/imgs/conferencia.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: center;
+        height: 2em;
+        width: auto;
+        margin: 1em;
+    } */
+
+    .redes-section{
+        background: $dark-bg;
+        padding: 3em 15%;
+    }
+
+
+    //EVENTO HOME
+
+.section-evento{
+        background-color: $dark-bg;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        padding: 20em 15%;
+
+        @include respond-to($phone){
+            display: grid;
+            padding: 7em 1em;
+        }
+        @include respond-to($tablet-portrait){ 
+            padding: 5em;
+        }
+        
+    }
+.barra-evento{
+    position: absolute;
+    margin-top: 14%;
+    margin-left: 25%;
+    transform: rotate(90deg);
+    opacity:1 ;
+    padding: 0.2em;
+    color: white;
+    width: 29%;
+    height: auto;    
+
+    @include respond-to($phone){
+        display: none;
+    }
+    @include respond-to($tablet-portrait){ 
+       width: 70%;
+       margin-left: 5%;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 80%;
+        margin-left: 0;
+        margin-top: 40%;
+    }
+}
+
+.evento-title{
+    font-family: LatoBold;
+    color: white;
+    text-transform: uppercase;
+    width: auto;
+    line-height: 1.7em;
+    padding: 0em 0.5em;
+    font-size: 2em;
+    margin-left: 3em;
+
+    @include respond-to($phone){
+        font-size: 1.5em;
+        text-align: center;
+        width: 12em;
+        padding: 0;
+        margin: 10%;
+    }
+    @include respond-to($tablet-portrait){ 
+        font-size: 1em;
+    }
+}
+.evento-subtitle{
+    font-family: LatoRegular;
+    font-size: 1.5em;
+    color: white;
+    text-align: left;
+    margin-left: 5em;
+    @include respond-to($phone){
+        font-size: 1em;
+        text-align: center;
+        width: 20em;
+        padding: 0;
+        margin: 10%;
+    }
+    @include respond-to($tablet-portrait){ 
+        font-size: 1em;
+        margin-left: 3em;
+    }
+   
+}
+.evento-price{
+    font-family: LatoRegular;
+    color: $primario;
+    text-align: left;
+    margin-left: 4em;
+    line-height: 1.7em;
+    padding: 0em 0.5em;    
+    font-size: 1.7em;
+    @include respond-to($phone){
+        font-size: 1em;
+
+        margin: 0em 65%;
+    }
+    @include respond-to($tablet-portrait){ 
+        font-size: 1em;
+        margin-left: 3em;
+    }
+}
+.evento-main{
+    width: 100%;
+    height: 100%;
+    background: url(/imgs/boxeo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid;
+    border-color: white;
+    @include respond-to($phone){
+        width: 22em;
+        height: 15em;
+    }
+    @include respond-to($tablet-portrait){ 
+        width: 12em;
+        height: 12em;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 20em;
+        height: 20em;
+    }
+    
+}
+
+.dropdown{
+    margin: 5em;
+    font-family: LatoBold;
+    
+}
+.dropdown-menu.show{
+    width: 100%;
+}
+.dropdown-item:hover{
+cursor: pointer;
+}
+
+.dropdown-menu{
+    color: $primario;
+    border-color: $primario;
+}
+.btn-primary{
+    width: 100%;
+    color: $primario;
+    background-color: $dark-bg;
+    border-color: $primario;
+    font-size: 100%;
+    &:hover{
+        color: $dark-bg;
+        background-color: $primario;
+        border-color: $primario;
+    }
+
+    @include respond-to($phone){
+        width: 10em;
+        height: 3em;
+    }
+    @include respond-to($tablet-portrait){ 
+        width: 10em;
+    }
+}
+primary:focus {
+    color: #fff;
+    background-color: $primario;
+    border-color: $primario;
+    box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+}
+.btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: $primario;
+    border-color: $primario;
+}
+.asientos{
+    float: left;
+    margin: 5em;
+}
+//EVENTO END
+
+//RELACIONADOS-EVENTO
+
+.relacionados{
+    padding: 4em 0;
+    margin-top: 15%;
+    font-family: LatoRegular;
+    font-size: 1.5em;
+    text-align: left;
+    color: white; 
+    
+    
+}
+
+.relacionado-title{
+    font-family: LatoBold;
+    color: black;
+    text-decoration: none;
+    padding-top: 2em;
+    font-size: 1em;
+    text-align: left;
+    margin-left: 1em;
+    @include respond-to($tablet-portrait){ 
+        padding-top: 1em;
+        font-size: 0.8em;
+    }
+    @include respond-to($tablet-landscape){ 
+        padding-top: 1em;
+        font-size: 0.8em;
+    }
+
+}
+.relacionado-subtitle{
+    font-family: LatoRegular;
+    color: black;
+    font-size: 1em;
+    text-align: left;
+    margin: 1em;
+    padding-bottom: 2em;
+
+    @include respond-to($tablet-portrait){ 
+        font-size: 0.7em;
+    }
+    @include respond-to($tablet-landscape){ 
+        font-size: 0.7em;
+    }
+}
+.txt-background{
+    
+    background-color: white;
+    @include respond-to($phone){
+        width: 22em;
+        height: 15em;
+        margin-bottom: 5em;
+    }
+    @include respond-to($tablet-portrait){ 
+        width: 8em;
+        height: 16em;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 10em;
+        height: 10em;
+    }
+
+}
+.relacionado-1{
+    background: url(/imgs/evento-1.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 10em 15%;
+    @include respond-to($phone){
+        width: 22em;
+        height: 15em;
+        
+    }
+    @include respond-to($tablet-portrait){ 
+        width: 8em;
+        height: 8em;
+        padding: 0;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 10em;
+        height: 10em;
+        padding: 0;
+    }
+}
+
+.relacionado-2{
+    background: url(/imgs/futbol.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 10em 15%;
+    @include respond-to($phone){
+        width: 22em;
+        height: 15em;
+    }
+    @include respond-to($tablet-portrait){ 
+        width: 8em;
+        height: 8em;
+        padding: 0;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 10em;
+        height: 10em;
+        padding: 0;
+    }
+}
+.relacionado-3{
+    background: url(/imgs/oktoberfest.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 10em 15%;
+    @include respond-to($phone){
+        width: 22em;
+        height: 15em;
+    }
+    @include respond-to($tablet-portrait){ 
+        width: 8em;
+        height: 8em;
+        padding: 0;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 10em;
+        height: 10em;
+        padding: 0;
+    }
+}
+.relacionado-4{
+    background: url(/imgs/festival.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 10em 15%;
+    @include respond-to($phone){
+        width: 22em;
+        height: 15em;
+    }
+    @include respond-to($tablet-portrait){ 
+        width: 8em;
+        height: 8em;
+        padding: 0;
+    }
+    @include respond-to($tablet-landscape){ 
+        width: 10em;
+        height: 10em;
+        padding: 0;
+    }
+}
+
+//RELACIONADOS EVENTO END
+
+//CATEGORIES HOME
+
+.section-categories{
+    background-color: $dark-bg;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 15em 15%;
+    @include respond-to($phone){
+    display: block;
+    padding: 3em 10% ;
+    }
+    @include respond-to($tablet-landscape){
+        padding: 3em 10%;
+        }
+    @include respond-to($tablet-portrait){
+            padding: 3em 10%;
+            }
+
+
+}
+
+.category-sports{
+    padding: 2em 0;
+    font-family: LatoRegular;
+    font-size: 1.5em;
+    text-align: left;
+    color: white; 
+}
+.category-concerts{
+    padding: 2em 0;
+    font-family: LatoRegular;
+    font-size: 1.5em;
+    text-align: left;
+    color: white; 
+}
+
+.title-categories{
+font-family: LatoBold;
+color: white;
+text-align: left;
+text-transform: uppercase;
+width: auto;
+padding: 0em 0.5em;
+font-size: 1.2em;
+@include respond-to($tablet-landscape){
+    display: block;
+    padding: 3em 10% ;
+    }
+    @include respond-to($tablet-portrait){
+        font-size: 1em;
+        position: relative;
+        left: 15%;
+        }
+
+
+}
+.subtitle-categories{
+font-family: LatoRegular;
+font-size: 1.2em;
+color: white;
+text-align: left;
+@include respond-to($tablet-landscape){
+    position: relative;
+    left: -20%;
+    width: 80%;
+    padding: 2em 0;
+    }
+    @include respond-to($tablet-portrait){
+        position: relative;
+    left: -20%;
+    width: 100%;
+    padding: 4em 0;
+        }
+
+}
+.price-categories{
+font-family: LatoRegular;
+color: $primario;
+text-align: left;
+line-height: 1.7em;
+padding: 0em 0.5em;    
+font-size: 1.2em;
+@include respond-to($tablet-landscape){
+    position: absolute;
+    left: 10%;
+    }
+    @include respond-to($tablet-portrait){
+        font-size: 1em;
+        position: relative;
+        left: 15%;
+        }
+    
+}
+.categories-main{
+width: 100%;
+height: 100%;
+background: url(/imgs/boxeo.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+border: solid;
+border-color: white;
+@include respond-to($phone){
+    width: 18em;
+    height: 15em;
+    }
+    @include respond-to($tablet-landscape){
+        width: 10em;
+        height: 10em;
+        }
+        @include respond-to($tablet-portrait){
+            width: 10em;
+            height: 10em;
+            }
+    
+    }
+.categories-secondary{
+    width: 100%;
+    height: 100%;
+    background: url(/imgs/futbol.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid;
+    border-color: white;
+
+    @include respond-to($phone){
+        width: 18em;
+        height: 15em;
+        }
+        @include respond-to($tablet-landscape){
+            width: 10em;
+            height: 10em;
+            }
+            @include respond-to($tablet-portrait){
+                width: 10em;
+                height: 10em;
+                }
+    }
+    
+
+    .division-categorias{
+        margin-top: 5%;
+    }
+//CATEGORIES END
+
+//Confirmar Section
+
+
+//confirmar END
+
+
+//MODAL SECTION
+
+.section-registro{
+    background: url(/imgs/festival.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 20em 15%;
+    
+}
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: white;
+}
+.pop-up-header {
+    display: flex;
+    flex-shrink: 0;
+
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: $dark-bg;
+    background-clip: padding-box;
+    border: solid;
+    border-color: white;
+    border-radius: .3rem;
+    outline: 0;
+    margin-top: 50%;
+    @include respond-to($tablet-portrait){ 
+        margin-top: 10%;
+        width: 70%;
+        margin-left: 20%;
+        height: 70%;
+ 
+    }
+    @include respond-to($tablet-landscape){ 
+        margin-top: 10%;
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+
+
+.btn-check:focus+.btn-info, .btn-info:focus {
+    color: white;
+    background-color: $primario;
+    border-color: $primario;
+    box-shadow: 0 0 0 0.25rem rgb(11 172 204 / 50%);
+}
+.btn-info {
+    font-family: LatoBold;
+    color: white;
+    background-color: $primario;
+    border-color: $primario;
+    &:hover{
+        background-color: $terciario;
+    border-color: white;
+    color: white;
+    }
+}
+.ingresar-texto{
+    font-family: LatoBold;
+    color: black;
+    text-align: center;
+    border: none;
+    background: white;
+    outline: none;
+    border-radius: 0.3em;
+    
+width: 100%;
+margin-bottom: 1em;
+}
+.ingresar-numeros{
+    font-family: LatoBold;
+    color: black;
+    text-align: center;
+    border: none;
+    background: white;
+    outline: none;
+    border-radius: 0.3em;
+    user-select: none;
+    
+width: 25%;
+margin-bottom: 1em;
+}
+.label-numeros{
+    color: white;
+    font-family: LatoRegular;
+    text-align: left;
+    float: left;
+}
+.confirmacion{
+    font-family: LatoBold;
+    color: white;
+}
+.modal-text{
+    font-family: LatoBold;
+    color: $primario;
+}
+.close{
+    color: gray;
+    &:hover{
+        color:gray;
+    }
+}
+.btn-registrarse{
+    font-family: LatoBold;
+    color: white;
+    background-color: $primario;
+}

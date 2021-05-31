@@ -1,0 +1,2054 @@
+@font-face {
+  font-family: "LatoBoldItalic";
+  src: url("../fonts/Lato-BlackItalic.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LatoRegular";
+  src: url("../fonts/Lato-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LatoBold";
+  src: url("../fonts/Lato-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.parallax-section {
+  background: #fff;
+  padding: 3em 15% 8em;
+  background: url(/imgs/twitch.jpg);
+  height: 20em;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-section-2 {
+  background: #fff;
+  padding: 3em 15% 8em;
+  background: url(/imgs/carnaval.jpg);
+  height: 20em;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.topbar {
+  background-color: #000;
+  padding: 0.5em 15%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999999;
+  display: block;
+}
+@media only screen and (max-width: 480px) {
+  .topbar {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .topbar {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .topbar {
+    display: none;
+  }
+}
+
+.top-nav-logo {
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.876em;
+  font-family: LatoBold;
+}
+
+.top-nav-logo-link {
+  text-decoration: none;
+  color: #fff;
+  float: left;
+}
+.top-nav-logo-link:hover {
+  color: #fff;
+}
+
+.img-ticket {
+  height: 1.5em;
+  width: auto;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  margin-right: 0.5em;
+}
+
+.carrito-btn {
+  width: 5em;
+  height: 2em;
+  margin: 0em auto;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5em;
+  color: white;
+  background: none;
+  border-style: solid;
+  border-color: white;
+  border-radius: 7em;
+  float: left;
+}
+.carrito-btn:hover {
+  color: #EB9205;
+  background-color: #202020;
+  border-color: #202020;
+}
+
+.img-carrito {
+  height: 1.5em;
+  width: auto;
+  margin: 0.2em 15%;
+}
+
+.carrito-item {
+  font-family: LatoBold;
+  font-size: 0.875em;
+  list-style: none;
+  float: left;
+  padding: 0em 2em;
+}
+
+.carrito-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+  padding: 0.3em 0.8em;
+}
+.carrito-link:hover {
+  color: #EB9205;
+}
+
+.nav {
+  margin-top: 3em;
+  padding: 5em 15%;
+  position: absolute;
+  width: 100%;
+}
+@media only screen and (max-width: 480px) {
+  .nav {
+    padding: 1em 5%;
+    margin-top: 0;
+    background: #202020;
+    position: fixed;
+    z-index: 9;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .nav {
+    padding: 1em 5%;
+    margin-top: 0;
+    background: #202020;
+    position: fixed;
+    z-index: 9;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .nav {
+    padding: 1em 5%;
+    margin-top: 0;
+    background: #202020;
+    position: fixed;
+    z-index: 9;
+  }
+}
+
+.hr-nav {
+  color: white;
+  margin: 3em 0em;
+  padding: 0.1em;
+  opacity: 1;
+  position: absolute;
+  width: 70%;
+}
+@media only screen and (max-width: 480px) {
+  .hr-nav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .hr-nav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .hr-nav {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  float: right;
+}
+@media only screen and (max-width: 480px) {
+  .mobile-menu {
+    display: inline-block;
+    width: 1.5em;
+  }
+}
+.mobile-menu img {
+  vertical-align: -webkit-baseline-middle;
+}
+
+#menu {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  #menu:checked ~ .nav-list {
+    left: 0;
+    display: block;
+  }
+}
+
+.nav-logo {
+  text-align: left;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.876em;
+  font-family: LatoBold;
+  display: inline-block;
+}
+@media only screen and (max-width: 480px) {
+  .nav-logo {
+    font-size: 1.5em;
+  }
+}
+
+.nav-logo-link {
+  font-family: LatoBold;
+  text-decoration: none;
+  color: white;
+  float: left;
+}
+.nav-logo-link:hover {
+  color: white;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .nav-logo-link {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .nav-logo-link {
+    font-size: 0.8em;
+  }
+}
+
+.nav-list {
+  padding: 0;
+  text-align: right;
+  float: right;
+}
+@media only screen and (max-width: 480px) {
+  .nav-list {
+    display: block;
+    position: absolute;
+    float: none;
+    text-align: center;
+    margin-top: 3em;
+    padding: 4em 0 0;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: #202020;
+    z-index: 9;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .nav-list {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .nav-list {
+    font-size: 0.6em;
+  }
+}
+
+.nav-item {
+  font-family: LatoBold;
+  font-size: 1em;
+  list-style: none;
+  float: left;
+  padding: 0 0 0 1em;
+  border: 2em;
+}
+@media only screen and (max-width: 480px) {
+  .nav-item {
+    float: none;
+    text-align: left;
+    padding: 0 0 3em;
+  }
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  font-size: 1em;
+  padding: 0.3em 0.8em;
+}
+@media only screen and (max-width: 480px) {
+  .nav-link {
+    padding: 0.3em 0;
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+  }
+}
+.nav-link:hover {
+  color: #EB9205;
+  padding-bottom: 0.9em;
+  border-bottom: 0.3em solid #FF6B00;
+}
+
+.header-section {
+  background: url(/imgs/evento.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 15em 15%;
+}
+
+.header-title {
+  font-family: LatoBoldItalic;
+  color: #202020;
+  font-size: 2.626em;
+  text-transform: uppercase;
+  width: auto;
+  line-height: 1.7em;
+  padding: 0em 0.5em;
+  background: white;
+  display: inline-block;
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .header-title {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .header-title {
+    font-size: 1.5em;
+  }
+}
+
+.header-subtitle {
+  font-family: LatoBoldItalic;
+  color: black;
+  text-transform: uppercase;
+  width: auto;
+  line-height: 1.7em;
+  padding: 0em 0.5em;
+  background: white;
+  display: inline-block;
+  font-size: 1.7em;
+  border-bottom: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .header-subtitle {
+    font-size: 1.7em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .header-subtitle {
+    font-size: 1.5em;
+  }
+}
+
+.buscar-caja {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #202020;
+  height: 4.5em;
+  border-radius: 40px;
+  border: solid;
+  border-color: white;
+  padding: 1em;
+}
+.buscar-caja:hover > .buscar-txt {
+  width: 15em;
+  padding: 0 6px;
+}
+@media only screen and (max-width: 480px) {
+  .buscar-caja {
+    top: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .buscar-caja {
+    top: 80%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .buscar-caja {
+    top: 100%;
+  }
+}
+
+.buscar-caja:hover > .buscar-btn {
+  background: #EB9205;
+  color: white;
+}
+@media only screen and (max-width: 480px) {
+  .buscar-caja:hover > .buscar-btn {
+    font-size: 1em;
+  }
+}
+
+.buscar-btn {
+  color: #e84118;
+  float: right;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: #2f3640;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: white;
+  cursor: pointer;
+}
+
+.buscar-btn > i {
+  font-size: 20px;
+}
+
+.buscar-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 1.5em;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  line-height: 0.1em;
+  width: 0px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 480px) {
+  .buscar-txt {
+    font-size: 1.2em;
+  }
+}
+
+.schedule-section {
+  background: #202020;
+  color: #fff;
+  padding: 3em 15%;
+}
+@media only screen and (max-width: 480px) {
+  .schedule-section {
+    display: block;
+    padding: 1em;
+  }
+}
+
+.schedule-title {
+  margin-bottom: 2em;
+  font-family: LatoRegular;
+  font-size: 1.876em;
+  text-align: left;
+  color: #fff;
+  color: #EB9205;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .schedule-title {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .no-mostrar-phone {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .no-mostrar-phone {
+    width: 2em;
+  }
+}
+
+.schedule-subtitle {
+  padding: 0;
+  margin: 0;
+  font-family: LatoRegular;
+  font-size: 1.5em;
+  text-align: left;
+  color: #fff;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .schedule-subtitle {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .schedule-subtitle {
+    font-size: 0.8em;
+    width: 12em;
+  }
+}
+
+.text-services {
+  font-family: LatoRegular;
+  color: #fff;
+  text-align: left;
+  font-size: 0.75em;
+}
+
+.get-ticket-btn {
+  width: 6em;
+  text-decoration: none;
+  font-family: LatoBold;
+  font-size: 1.2em;
+  color: #f0f0f0;
+  background: #3B81D3;
+  border-radius: 1em;
+  float: left;
+}
+.get-ticket-btn:hover {
+  color: white;
+  background-color: #EB9205;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .get-ticket-btn {
+    font-size: 1em;
+  }
+}
+
+.barra-schedule {
+  position: relative;
+  width: 100%;
+  color: white;
+  margin: 3em 0;
+  padding: 0em;
+}
+
+.upcoming-section {
+  background: #fff;
+  padding: 3em 15% 8em;
+}
+@media only screen and (max-width: 480px) {
+  .upcoming-section {
+    display: -ms-grid;
+    display: grid;
+    padding: 2em 2em;
+  }
+}
+
+.upcoming-title {
+  color: #EB9205;
+  font-family: LatoBold;
+  font-size: 1.876em;
+  text-align: left;
+  color: #fff;
+  color: #EB9205;
+  padding: 1em 0;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .upcoming-title {
+    font-size: 1em;
+  }
+}
+
+.texto-schedule {
+  font-family: LatoRegular;
+  font-size: 1.5em;
+  text-align: left;
+}
+@media only screen and (max-width: 480px) {
+  .texto-schedule {
+    display: block;
+    font-size: 1.2em;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .texto-schedule {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .texto-schedule {
+    font-size: 0.8em;
+  }
+}
+
+.all-events-btn {
+  font-family: LatoBold;
+  width: 100%;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #e84118;
+  background: none;
+  border-style: solid;
+  border-color: #e84118;
+  border-radius: 1em;
+  float: left;
+}
+.all-events-btn:hover {
+  color: #EB9205;
+  background-color: #202020;
+  border-color: #202020;
+}
+@media only screen and (max-width: 480px) {
+  .all-events-btn {
+    font-size: 1.2em;
+    width: 15em;
+    color: #EB9205;
+    background-color: #202020;
+    border-color: #202020;
+    margin-bottom: 3em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .all-events-btn {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .all-events-btn {
+    font-size: 0.9em;
+  }
+}
+
+.evento-principal {
+  width: 100%;
+  height: 30em;
+  background: url(/imgs/futbol.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: bottom;
+}
+@media only screen and (max-width: 480px) {
+  .evento-principal {
+    width: 18em;
+    height: 18em;
+    margin-bottom: 2em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .evento-principal {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .evento-principal {
+    width: 15em;
+    height: 15em;
+  }
+}
+
+.evento-secundario {
+  width: 100%;
+  height: 14em;
+  background: url(/imgs/evento-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+@media only screen and (max-width: 480px) {
+  .evento-secundario {
+    width: 18em;
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .evento-secundario {
+    width: 10em;
+    height: 10em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .evento-secundario {
+    width: 7em;
+    height: 7em;
+  }
+}
+
+.evento-side {
+  margin-top: 2em;
+  width: 208%;
+  height: 14em;
+  background: url(/imgs/boxeo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: top;
+}
+@media only screen and (max-width: 480px) {
+  .evento-side {
+    width: 18em;
+    height: 18em;
+    margin-bottom: 2em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .evento-side {
+    width: 21.5em;
+    height: 8em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .evento-side {
+    width: 15em;
+    height: 7em;
+    margin-top: 1em;
+  }
+}
+
+.evento-terciario {
+  width: 100%;
+  height: 14em;
+  background: url(/imgs/festival.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+@media only screen and (max-width: 480px) {
+  .evento-terciario {
+    width: 18em;
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .evento-terciario {
+    width: 10em;
+    height: 10em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .evento-terciario {
+    width: 7em;
+    height: 7em;
+  }
+}
+
+.categories-section {
+  background: #202020;
+  padding: 3em 15%;
+  height: 100%;
+}
+@media only screen and (max-width: 480px) {
+  .categories-section {
+    display: block;
+    padding: 1em 2em;
+  }
+}
+
+.category-title {
+  color: #EB9205;
+  margin: 2em 0 3em;
+  font-family: LatoBold;
+  font-size: 1.8em;
+  text-align: left;
+  color: #fff;
+  color: #EB9205;
+}
+@media only screen and (max-width: 480px) {
+  .category-title {
+    font-size: 1.4em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .category-title {
+    font-size: 1em;
+  }
+}
+
+.title-no {
+  margin-top: 0.3em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .title-no {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .title-no {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .title-no {
+    font-size: 0.8em;
+  }
+}
+
+.text-no {
+  margin: 2em;
+  font-size: medium;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .text-no {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .text-no {
+    font-size: 0.6em;
+    margin: 1em;
+  }
+}
+
+.categoria-deportes {
+  width: 100%;
+  height: 100%;
+  background: url(/imgs/deportes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+@media only screen and (max-width: 480px) {
+  .categoria-deportes {
+    width: 18em;
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .categoria-deportes {
+    width: 14em;
+    height: 14em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .categoria-deportes {
+    width: 9em;
+    height: 9em;
+  }
+}
+
+.categoria-comunidades {
+  width: 100%;
+  height: 100%;
+  background: url(/imgs/comunidades.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+@media only screen and (max-width: 480px) {
+  .categoria-comunidades {
+    width: 18em;
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .categoria-comunidades {
+    width: 14em;
+    height: 14em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .categoria-comunidades {
+    width: 9em;
+    height: 9em;
+  }
+}
+
+.categoria-conciertos {
+  width: 100%;
+  height: 100%;
+  background: url(/imgs/concierto.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+@media only screen and (max-width: 480px) {
+  .categoria-conciertos {
+    width: 18em;
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .categoria-conciertos {
+    width: 14em;
+    height: 14em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .categoria-conciertos {
+    width: 9em;
+    height: 9em;
+  }
+}
+
+.categoria-teatro {
+  width: 100%;
+  height: 100%;
+  background: url(/imgs/teatro.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+@media only screen and (max-width: 480px) {
+  .categoria-teatro {
+    width: 18em;
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .categoria-teatro {
+    width: 14em;
+    height: 14em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .categoria-teatro {
+    width: 9em;
+    height: 9em;
+  }
+}
+
+.categoria-fiestas {
+  width: 100%;
+  height: 100%;
+  background: url(/imgs/fiesta.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+@media only screen and (max-width: 480px) {
+  .categoria-fiestas {
+    width: 18em;
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .categoria-fiestas {
+    width: 14em;
+    height: 14em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .categoria-fiestas {
+    width: 9em;
+    height: 9em;
+  }
+}
+
+.categoria-conferencias {
+  width: 100%;
+  height: 100%;
+  background: url(/imgs/conferencia.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+@media only screen and (max-width: 480px) {
+  .categoria-conferencias {
+    width: 18em;
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .categoria-conferencias {
+    width: 14em;
+    height: 14em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .categoria-conferencias {
+    width: 9em;
+    height: 9em;
+  }
+}
+
+.flip-card {
+  font-family: LatoRegular;
+  background-color: transparent;
+  width: 100.5%;
+  padding-bottom: 2em;
+  height: 19em;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+@media only screen and (max-width: 480px) {
+  .flip-card {
+    width: 18em;
+    height: 18em;
+    margin-bottom: 3em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .flip-card {
+    width: 14em;
+    height: 14em;
+    margin-bottom: 3em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .flip-card {
+    width: 9em;
+    height: 9em;
+    margin-bottom: 1em;
+  }
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 480px) {
+  .flip-card-inner {
+    width: 18em;
+    height: 18em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .flip-card-inner {
+    width: 14em;
+    height: 14em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .flip-card-inner {
+    width: 9em;
+    height: 9em;
+  }
+}
+
+.flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-card-front, .deportes-back, .comunidades-back, .conciertos-back, .teatro-back, .fiestas-back, .conferencias-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@media only screen and (max-width: 480px) {
+  .flip-card-front, .deportes-back, .comunidades-back, .conciertos-back, .teatro-back, .fiestas-back, .conferencias-back {
+    width: 18em;
+    height: 18em;
+    padding-bottom: 4em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .flip-card-front, .deportes-back, .comunidades-back, .conciertos-back, .teatro-back, .fiestas-back, .conferencias-back {
+    width: 14em;
+    height: 14em;
+    padding-bottom: 4em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .flip-card-front, .deportes-back, .comunidades-back, .conciertos-back, .teatro-back, .fiestas-back, .conferencias-back {
+    width: 9em;
+    height: 9em;
+    padding-bottom: 1em;
+  }
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.deportes-back {
+  font-family: LatoRegular;
+  background-color: #821313;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.comunidades-back {
+  font-family: LatoRegular;
+  background-color: #3948CD;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.conciertos-back {
+  font-family: LatoRegular;
+  background-color: #8C39CD;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.teatro-back {
+  font-family: LatoRegular;
+  background-color: #227925;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.fiestas-back {
+  font-family: LatoRegular;
+  background-color: #981049;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.conferencias-back {
+  font-family: LatoRegular;
+  background-color: #2980b9;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.more-event-btn {
+  font-family: LatoBold;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: white;
+  background: transparent;
+  border: solid;
+  border-radius: 4em;
+}
+.more-event-btn:hover {
+  color: black;
+  background-color: white;
+  border: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .more-event-btn {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .more-event-btn {
+    font-size: 0.5em;
+  }
+}
+
+.footer-section {
+  background: #202020;
+  padding: 3em 15% 0;
+}
+
+.logo-footer {
+  color: #EB9205;
+  margin: 2em 0 16em;
+  font-family: LatoRegular;
+  font-size: 1.876em;
+  text-align: left;
+  color: #fff;
+  color: #EB9205;
+}
+
+.footer-title {
+  height: 5em;
+  width: 5em;
+  padding: 1.7em 1em;
+  background-color: #bbb;
+  color: black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.footer-subtitle {
+  padding: 0;
+  margin-top: 2em;
+  font-family: LatoRegular;
+  font-size: 1.5em;
+  text-align: left;
+  color: white;
+  text-align: center;
+}
+
+.barra-footer {
+  width: 100%;
+  color: white;
+  padding: 0.1em;
+}
+
+.rights {
+  font-family: LatoRegular;
+  text-align: left;
+  color: white;
+  text-align: center;
+}
+@media only screen and (max-width: 480px) {
+  .rights {
+    font-size: 0.6em;
+  }
+}
+
+.redes-facebook {
+  height: 2em;
+  width: 2em;
+  margin: 1em;
+  background: url(/imgs/facebook.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+
+.redes-instagram {
+  height: 2em;
+  width: 2em;
+  margin: 1em;
+  background: url(/imgs/instagram.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+
+.redes-twitter {
+  height: 2em;
+  width: 2em;
+  margin: 1em;
+  background: url(/imgs/twitter.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+
+.redes-github {
+  height: 2em;
+  width: 2em;
+  margin: 1em;
+  background: url(/imgs/github.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+
+.redes-linkedin {
+  height: 2em;
+  width: 2em;
+  margin: 1em;
+  background: url(/imgs/linkedin.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
+}
+
+/* 
+    .categoridsaas{
+        width: 100%;
+        height: 100%;
+        background: url(/imgs/conferencia.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-position: center;
+        height: 2em;
+        width: auto;
+        margin: 1em;
+    } */
+.redes-section {
+  background: #202020;
+  padding: 3em 15%;
+}
+
+.section-evento {
+  background-color: #202020;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 20em 15%;
+}
+@media only screen and (max-width: 480px) {
+  .section-evento {
+    display: -ms-grid;
+    display: grid;
+    padding: 7em 1em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .section-evento {
+    padding: 5em;
+  }
+}
+
+.barra-evento {
+  position: absolute;
+  margin-top: 14%;
+  margin-left: 25%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  opacity: 1;
+  padding: 0.2em;
+  color: white;
+  width: 29%;
+  height: auto;
+}
+@media only screen and (max-width: 480px) {
+  .barra-evento {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .barra-evento {
+    width: 70%;
+    margin-left: 5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .barra-evento {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 40%;
+  }
+}
+
+.evento-title {
+  font-family: LatoBold;
+  color: white;
+  text-transform: uppercase;
+  width: auto;
+  line-height: 1.7em;
+  padding: 0em 0.5em;
+  font-size: 2em;
+  margin-left: 3em;
+}
+@media only screen and (max-width: 480px) {
+  .evento-title {
+    font-size: 1.5em;
+    text-align: center;
+    width: 12em;
+    padding: 0;
+    margin: 10%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .evento-title {
+    font-size: 1em;
+  }
+}
+
+.evento-subtitle {
+  font-family: LatoRegular;
+  font-size: 1.5em;
+  color: white;
+  text-align: left;
+  margin-left: 5em;
+}
+@media only screen and (max-width: 480px) {
+  .evento-subtitle {
+    font-size: 1em;
+    text-align: center;
+    width: 20em;
+    padding: 0;
+    margin: 10%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .evento-subtitle {
+    font-size: 1em;
+    margin-left: 3em;
+  }
+}
+
+.evento-price {
+  font-family: LatoRegular;
+  color: #EB9205;
+  text-align: left;
+  margin-left: 4em;
+  line-height: 1.7em;
+  padding: 0em 0.5em;
+  font-size: 1.7em;
+}
+@media only screen and (max-width: 480px) {
+  .evento-price {
+    font-size: 1em;
+    margin: 0em 65%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .evento-price {
+    font-size: 1em;
+    margin-left: 3em;
+  }
+}
+
+.evento-main {
+  width: 100%;
+  height: 100%;
+  background: url(/imgs/boxeo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: solid;
+  border-color: white;
+}
+@media only screen and (max-width: 480px) {
+  .evento-main {
+    width: 22em;
+    height: 15em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .evento-main {
+    width: 12em;
+    height: 12em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .evento-main {
+    width: 20em;
+    height: 20em;
+  }
+}
+
+.dropdown {
+  margin: 5em;
+  font-family: LatoBold;
+}
+
+.dropdown-menu.show {
+  width: 100%;
+}
+
+.dropdown-item:hover {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  color: #EB9205;
+  border-color: #EB9205;
+}
+
+.btn-primary {
+  width: 100%;
+  color: #EB9205;
+  background-color: #202020;
+  border-color: #EB9205;
+  font-size: 100%;
+}
+.btn-primary:hover {
+  color: #202020;
+  background-color: #EB9205;
+  border-color: #EB9205;
+}
+@media only screen and (max-width: 480px) {
+  .btn-primary {
+    width: 10em;
+    height: 3em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .btn-primary {
+    width: 10em;
+  }
+}
+
+primary:focus {
+  color: #fff;
+  background-color: #EB9205;
+  border-color: #EB9205;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+}
+
+.btn-check:active + .btn-primary, .btn-check:checked + .btn-primary, .btn-primary.active, .btn-primary:active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #EB9205;
+  border-color: #EB9205;
+}
+
+.asientos {
+  float: left;
+  margin: 5em;
+}
+
+.relacionados {
+  padding: 4em 0;
+  margin-top: 15%;
+  font-family: LatoRegular;
+  font-size: 1.5em;
+  text-align: left;
+  color: white;
+}
+
+.relacionado-title {
+  font-family: LatoBold;
+  color: black;
+  text-decoration: none;
+  padding-top: 2em;
+  font-size: 1em;
+  text-align: left;
+  margin-left: 1em;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .relacionado-title {
+    padding-top: 1em;
+    font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .relacionado-title {
+    padding-top: 1em;
+    font-size: 0.8em;
+  }
+}
+
+.relacionado-subtitle {
+  font-family: LatoRegular;
+  color: black;
+  font-size: 1em;
+  text-align: left;
+  margin: 1em;
+  padding-bottom: 2em;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .relacionado-subtitle {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .relacionado-subtitle {
+    font-size: 0.7em;
+  }
+}
+
+.txt-background {
+  background-color: white;
+}
+@media only screen and (max-width: 480px) {
+  .txt-background {
+    width: 22em;
+    height: 15em;
+    margin-bottom: 5em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .txt-background {
+    width: 8em;
+    height: 16em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .txt-background {
+    width: 10em;
+    height: 10em;
+  }
+}
+
+.relacionado-1 {
+  background: url(/imgs/evento-1.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 10em 15%;
+}
+@media only screen and (max-width: 480px) {
+  .relacionado-1 {
+    width: 22em;
+    height: 15em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .relacionado-1 {
+    width: 8em;
+    height: 8em;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .relacionado-1 {
+    width: 10em;
+    height: 10em;
+    padding: 0;
+  }
+}
+
+.relacionado-2 {
+  background: url(/imgs/futbol.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 10em 15%;
+}
+@media only screen and (max-width: 480px) {
+  .relacionado-2 {
+    width: 22em;
+    height: 15em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .relacionado-2 {
+    width: 8em;
+    height: 8em;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .relacionado-2 {
+    width: 10em;
+    height: 10em;
+    padding: 0;
+  }
+}
+
+.relacionado-3 {
+  background: url(/imgs/oktoberfest.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 10em 15%;
+}
+@media only screen and (max-width: 480px) {
+  .relacionado-3 {
+    width: 22em;
+    height: 15em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .relacionado-3 {
+    width: 8em;
+    height: 8em;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .relacionado-3 {
+    width: 10em;
+    height: 10em;
+    padding: 0;
+  }
+}
+
+.relacionado-4 {
+  background: url(/imgs/festival.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 10em 15%;
+}
+@media only screen and (max-width: 480px) {
+  .relacionado-4 {
+    width: 22em;
+    height: 15em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .relacionado-4 {
+    width: 8em;
+    height: 8em;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .relacionado-4 {
+    width: 10em;
+    height: 10em;
+    padding: 0;
+  }
+}
+
+.section-categories {
+  background-color: #202020;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 15em 15%;
+}
+@media only screen and (max-width: 480px) {
+  .section-categories {
+    display: block;
+    padding: 3em 10%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .section-categories {
+    padding: 3em 10%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .section-categories {
+    padding: 3em 10%;
+  }
+}
+
+.category-sports {
+  padding: 2em 0;
+  font-family: LatoRegular;
+  font-size: 1.5em;
+  text-align: left;
+  color: white;
+}
+
+.category-concerts {
+  padding: 2em 0;
+  font-family: LatoRegular;
+  font-size: 1.5em;
+  text-align: left;
+  color: white;
+}
+
+.title-categories {
+  font-family: LatoBold;
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+  width: auto;
+  padding: 0em 0.5em;
+  font-size: 1.2em;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .title-categories {
+    display: block;
+    padding: 3em 10%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .title-categories {
+    font-size: 1em;
+    position: relative;
+    left: 15%;
+  }
+}
+
+.subtitle-categories {
+  font-family: LatoRegular;
+  font-size: 1.2em;
+  color: white;
+  text-align: left;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .subtitle-categories {
+    position: relative;
+    left: -20%;
+    width: 80%;
+    padding: 2em 0;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .subtitle-categories {
+    position: relative;
+    left: -20%;
+    width: 100%;
+    padding: 4em 0;
+  }
+}
+
+.price-categories {
+  font-family: LatoRegular;
+  color: #EB9205;
+  text-align: left;
+  line-height: 1.7em;
+  padding: 0em 0.5em;
+  font-size: 1.2em;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .price-categories {
+    position: absolute;
+    left: 10%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .price-categories {
+    font-size: 1em;
+    position: relative;
+    left: 15%;
+  }
+}
+
+.categories-main {
+  width: 100%;
+  height: 100%;
+  background: url(/imgs/boxeo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: solid;
+  border-color: white;
+}
+@media only screen and (max-width: 480px) {
+  .categories-main {
+    width: 18em;
+    height: 15em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .categories-main {
+    width: 10em;
+    height: 10em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .categories-main {
+    width: 10em;
+    height: 10em;
+  }
+}
+
+.categories-secondary {
+  width: 100%;
+  height: 100%;
+  background: url(/imgs/futbol.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: solid;
+  border-color: white;
+}
+@media only screen and (max-width: 480px) {
+  .categories-secondary {
+    width: 18em;
+    height: 15em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .categories-secondary {
+    width: 10em;
+    height: 10em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .categories-secondary {
+    width: 10em;
+    height: 10em;
+  }
+}
+
+.division-categorias {
+  margin-top: 5%;
+}
+
+.section-registro {
+  background: url(/imgs/festival.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 20em 15%;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: white;
+}
+
+.pop-up-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px);
+}
+
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #202020;
+  background-clip: padding-box;
+  border: solid;
+  border-color: white;
+  border-radius: 0.3rem;
+  outline: 0;
+  margin-top: 50%;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .modal-content {
+    margin-top: 10%;
+    width: 70%;
+    margin-left: 20%;
+    height: 70%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .modal-content {
+    margin-top: 10%;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.btn-check:focus + .btn-info, .btn-info:focus {
+  color: white;
+  background-color: #EB9205;
+  border-color: #EB9205;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(11, 172, 204, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(11, 172, 204, 0.5);
+}
+
+.btn-info {
+  font-family: LatoBold;
+  color: white;
+  background-color: #EB9205;
+  border-color: #EB9205;
+}
+.btn-info:hover {
+  background-color: #3B81D3;
+  border-color: white;
+  color: white;
+}
+
+.ingresar-texto {
+  font-family: LatoBold;
+  color: black;
+  text-align: center;
+  border: none;
+  background: white;
+  outline: none;
+  border-radius: 0.3em;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.ingresar-numeros {
+  font-family: LatoBold;
+  color: black;
+  text-align: center;
+  border: none;
+  background: white;
+  outline: none;
+  border-radius: 0.3em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 25%;
+  margin-bottom: 1em;
+}
+
+.label-numeros {
+  color: white;
+  font-family: LatoRegular;
+  text-align: left;
+  float: left;
+}
+
+.confirmacion {
+  font-family: LatoBold;
+  color: white;
+}
+
+.modal-text {
+  font-family: LatoBold;
+  color: #EB9205;
+}
+
+.close {
+  color: gray;
+}
+.close:hover {
+  color: gray;
+}
+
+.btn-registrarse {
+  font-family: LatoBold;
+  color: white;
+  background-color: #EB9205;
+}
